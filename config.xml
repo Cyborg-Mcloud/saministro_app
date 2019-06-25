@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+		xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.designge.saministro"
+	    versionCode="1" 
+        version   = "0.0.1"
+		package="com.designge.saministro"
+		xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Alibi</name>
+
+	
+	<icon src="icon_1024.jpg" />
+	<icon src="icon_1024.jpg" width="1024" height="1024" />
+
+
+
+
+<access origin="*" />
+<allow-intent href="*" />
+<allow-navigation href="*" />
+<allow-navigation href="*://*.smartgps.ge/*" />
+<allow-intent href="http://*/*" launch-external="yes"/>
+	<allow-intent href="https://*/*" launch-external="yes"/>
+ <platform name="android">
+        <preference name="android-minSdkVersion" value="18" />
+        <allow-intent href="market:*" />
+    </platform>
+
+
+
+<platform name="ios">
+		<icon gap:platform="ios" src="icon_1024.jpg" width="1024" height="1024" />
+		<icon gap:platform="ios" width="40" height="40" src="icon_40.png"  />
+		<icon gap:platform="ios" width="80" height="80" src="icon_40-2x.png"  />
+		<icon gap:platform="ios" width="57" height="57" src="icon_57.png"  />
+		<icon gap:platform="ios" width="72" height="72" src="icon_72.png"  />
+		<icon gap:platform="ios" width="72" height="72" src="icon_60.png"  />
+		<icon gap:platform="ios" width="114" height="114" src="icon_57-2x.jpg" />
+		<icon gap:platform="ios" width="144" height="144" src="icon_72-2x.jpg"  />
+		<icon gap:platform="ios" width="120" height="120" src="icon_120.png"  />
+
+        <allow-intent href="itms:smartgps.ge"/>
+        <allow-intent href="itms-apps:smartgps.ge"/>
+		<gap:config-file platform="ios" parent="com.apple.developer.associated-domains" mode="replace">
+			<array>
+				<string>applinks:smartgps.ge</string>
+			</array>
+		</gap:config-file> 
+
+		  <config-file target="*-Debug.plist" parent="com.apple.developer.associated-domains">
+      <array>
+        <string>applinks:smartgps.ge</string>
+      </array>
+    </config-file>
+
+		<config-file target="*-Release.plist" parent="com.apple.developer.associated-domains">
+		  <array>
+			<string>applinks:smartgps.ge</string>
+		  </array>
+		</config-file>
+
+			<config-file platform="ios" target="Entitlements-*.plist" parent="com.apple.developer.associated-domains" mode="replace">
+
+			 <array>  
+
+				  <string>applinks:smartgps.ge</string>
+
+			 </array>
+
+		</config-file>
+
+	
+    </platform>
+
+	<gap:config-file platform="ios" parent="CFBundleShortVersionString">
+    <string>1.5.7</string>
+</gap:config-file>
+
+<preference name="android-build-tool" value="gradle" /> 
+<!--<preference name="StatusBarOverlaysWebView" value="true" />-->
+	<preference name="phonegap-version" value="cli-8.0.0" /> 
+	<preference name="orientation" value="portrait" />
+	<preference name="target-device"              value="handset" />
+<!--	<preference name="fullscreen" value="true" />-->
+	<preference name="webviewbounce" value="true" />  
+	<preference name="DisallowOverscroll" value="false" />
+	<preference name="stay-in-webview"            value="false" /> 
+
+<preference name="exit-on-suspend"            value="false" />          
+<preference name="show-splash-screen-spinner" value="false" />    
+<preference name="auto-hide-splash-screen"    value="false" />
+<preference name="disable-cursor"             value="false" />
+<preference name="android-minSdkVersion"      value="18" />         
+<preference name="android-installLocation"    value="auto" />
+<preference name="EnableViewportScale"    value="true" />
+
+<preference name="StatusBarOverlaysWebView" value="true" />
+<preference name="StatusBarBackgroundColor" value="#5c2b91" />
+<preference name="StatusBarStyle" value="lightcontent" />
+
+	<description>
+Saministro App
+    </description>
+	
+
+    <author href="http://design.ge" email="uabashidze@gmail.com">
+        Cyborg-Mcloud
+    </author>
+
+
+ 
+    <plugins>
+
+
+
+
+
+	<feature name="App">
+	  <param name="android-package" value="com.designge.saministro"/>
+	</feature>
+	
+	 
+	<feature name="http://api.phonegap.com/1.0/geolocation"/>
+	<feature name="http://api.phonegap.com/1.0/device" />
+	<gap:plugin name="cordova-plugin-geolocation" source="npm"/>
+
+	<gap:plugin name="cordova-plugin-statusbar" source="npm" />
+	<gap:plugin name="cordova-plugin-inappbrowser"  source="npm" />
+	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
+
+
+	<gap:plugin name="cordova-plugin-request-location-accuracy" source="npm" />
+	<plugin name="cordova-plugin-globalization" source="npm" />
+	<gap:plugin name="cordova-plugin-inappbrowser"  source="npm" />
+
+	<plugin name="cordova.plugins.diagnostic" source="npm" />
+
+	<plugin name="cordova-plugin-globalization" source="npm" />
+	<plugin name="cordova-plugin-dialogs" spec="^1.3.4"/>
+	<plugin name="cordova-plugin-device" source="npm" />
+
+	<gap:plugin name="cordova-plugin-uniquedeviceid" source="npm" />
+	<plugin name="cordova-android-support-gradle-release" spec="^1.1.1">
+		<variable name="ANDROID_SUPPORT_VERSION" value="26.0.1" />
+	</plugin>
+    </plugins>
+</widget>
