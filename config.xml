@@ -7,7 +7,7 @@
         version   = "0.0.1"
 		package="com.designge.saministro"
 		xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>Alibi</name>
+    <name>Saministro App</name>
 
 	
 	<icon src="icon_1024.jpg" />
